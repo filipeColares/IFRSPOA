@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Porta
+comment0.text=\r\n\ Escreva\ a\ descri\u00E7\u00E3o\ da\ classe\ Porta\ aqui.\r\n\ \r\n\ @author\ (seu\ nome)\ \r\n\ @version\ (n\u00FAmero\ de\ vers\u00E3o\ ou\ data)\r\n
+comment1.params=material\ altura\ largura
+comment1.target=Porta(java.lang.String,\ double,\ double)
+comment2.params=
+comment2.target=void\ abrir()
+comment3.params=
+comment3.target=void\ fechar()
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5
