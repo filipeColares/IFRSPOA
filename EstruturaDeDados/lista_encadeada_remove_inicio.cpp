@@ -41,12 +41,29 @@ void removePrimeiroNodo(Nodo **pp_nodo){
 		free(nodo_aux);
 		
 		//nodo auxiliar recebe nulo para n�o ter mais seu endere�o da mem�ria;
-		nodo_aux == nodo_ini;
+		nodo_aux = nodo_ini;
 	}
 	
 	*pp_nodo = nodo_ini;
 };
 
+/*void removeUltimoNodo(Nodo **pp_nodo){
+	
+	Nodo *nodo_fim, *nodo_aux;
+	
+	nodo_fim = *pp_nodo;
+	
+	if(nodo_fim){
+		
+		for(int x; x != NULL; x = nodo_fim -> proximo){
+		
+			printf("info = %d\n", x->valor);
+			
+		}
+		
+	}
+	
+}*/
 int main(int argc, char *argv[]) {
 
   //Variáveis que apontam para o início e o fim da lista.
@@ -99,17 +116,51 @@ int main(int argc, char *argv[]) {
     nodo_fim = nodo_aux;
   }
 
+  nodo_aux = (Nodo*)malloc(sizeof(Nodo));
+  if (nodo_aux) {
+    //Preenche os dados do nodo com um valor qualquer para teste.
+    nodo_aux->valor = 8;
+    //Como esse nodo será colocado no final da lista, então não tem nenhum nodo após ele.
+    nodo_aux->proximo = NULL;
+    //O nodo anterior (nodo_fim), que era o último nodo da lista, 
+    //tem que apontar para o nodo_aux recém criado.
+    nodo_fim->proximo = nodo_aux;
+    //O final da lista agora é esse nodo_aux recém criado.
+    nodo_fim = nodo_aux;
+  }
+  
+  nodo_aux = (Nodo*)malloc(sizeof(Nodo));
+  if (nodo_aux) {
+    //Preenche os dados do nodo com um valor qualquer para teste.
+    nodo_aux->valor = 9;
+    //Como esse nodo será colocado no final da lista, então não tem nenhum nodo após ele.
+    nodo_aux->proximo = NULL;
+    //O nodo anterior (nodo_fim), que era o último nodo da lista, 
+    //tem que apontar para o nodo_aux recém criado.
+    nodo_fim->proximo = nodo_aux;
+    //O final da lista agora é esse nodo_aux recém criado.
+    nodo_fim = nodo_aux;
+  }
+  nodo_aux = (Nodo*)malloc(sizeof(Nodo));
+  if (nodo_aux) {
+    //Preenche os dados do nodo com um valor qualquer para teste.
+    nodo_aux->valor = 10;
+    //Como esse nodo será colocado no final da lista, então não tem nenhum nodo após ele.
+    nodo_aux->proximo = NULL;
+    //O nodo anterior (nodo_fim), que era o último nodo da lista, 
+    //tem que apontar para o nodo_aux recém criado.
+    nodo_fim->proximo = nodo_aux;
+    //O final da lista agora é esse nodo_aux recém criado.
+    nodo_fim = nodo_aux;
+  }
+  
   //Usando um laço para percorrer toda a lista:
   nodo_aux = nodo_ini;
-  /*while (nodo_aux) {
-    printf("Valor do nodo = %d\n", nodo_aux->valor);
-    nodo_aux = nodo_aux->proximo;
-  }*/
   
   removePrimeiroNodo(&nodo_ini);
+  nodo_aux = nodo_ini;
+  
   while (nodo_aux) {
-    printf("Removendo o primeiro nodo");
-   // removePrimeiroNodo(&nodo_ini);
 	printf("Valor do nodo = %d\n", nodo_aux->valor);
     nodo_aux = nodo_aux->proximo;
   }
