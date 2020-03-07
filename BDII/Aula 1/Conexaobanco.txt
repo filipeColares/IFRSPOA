@@ -1,0 +1,6 @@
+User: usr106
+Senha: usr106
+
+host: 200.132.53.144
+port: 1521
+nome serviço: XEpdb1
