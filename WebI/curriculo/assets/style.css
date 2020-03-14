@@ -1,0 +1,34 @@
+.body{
+    font-family: 'Franklin Gothic Medium';
+    text-align: justify;
+    margin: 30px;
+}
+
+.personal-info{
+    text-align: justify;
+}
+
+.name{
+    margin-left: 120px;
+    width: 90%;
+    float: right;
+}
+
+.profile-img{
+    height: 100px;
+    width: 100px;
+    float: left;
+}
+
+.whoiam{
+    margin-top: 20px;
+}
+
+.footer-img{
+    width: 270px;
+    height: 50px;
+}
+
+h3{
+    font-family: Tahoma;
+}
